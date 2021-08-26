@@ -1,0 +1,97 @@
+<!--{{taskUpdated.taskId}}--{{taskUpdated.taskName}}-->
+<div id="appContainer">
+
+
+  <p class="h4 mb-4">Update Task</p>
+
+  <div class="form-row mb-4">
+    <div class="col">
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="lbltaskId">taskId </label>
+          <input type="text" class="form-control" id="lbltaskId" name="taskId" [(ngModel)]="taskUpdated.taskId"
+            readonly />
+        </div>
+       
+        <div class="form-row">
+          <div class="form-group">
+            <label for="lbltaskName">taskName </label>
+            <input type="text" class="form-control" id="lbltaskName" name="taskName" [(ngModel)]="taskUpdated.taskName"
+              placeholder="Enter TaskName" />
+          </div>
+          
+          <br>
+          <div class="col">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="lbltaskDate">taskDate </label>
+                <input type="date" class="form-control" id="lbltaskDate" name="taskDate"
+                  [(ngModel)]="taskUpdated.taskDate" placeholder="Enter taskDate" />
+              </div>
+             
+              <br>
+              <div class="col">
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="lbltaskTime">taskTime </label>
+                    <input type="time" class="form-control" id="lbltaskTime" name="taskTime"
+                      [(ngModel)]="taskUpdated.taskTime" placeholder="Enter tasktime" />
+                  </div>
+                  
+                  <br>
+                  <div class="col">
+                    <div class="form-row">
+                      <div class="form-group">
+                        <label for="lbltaskPriority">taskPriority </label>
+                        <input type="number" class="form-control" id="lbltaskPriority" name="taskPriority"
+                          [(ngModel)]="taskUpdated.taskPriority" placeholder="Enter taskpriority" />
+                      </div>
+                     
+                      <br>
+                      <div class="col">
+                        <div class="form-row">
+                          <div class="form-group">
+                            <label for="lbltaskCategory">taskCategory </label>
+                            <input type="text" class="form-control" id="lbltaskCategory" name="taskCategory"
+                              [(ngModel)]="taskUpdated.taskCategory" placeholder="Enter taskCategory" />
+                          </div>
+                          
+                          <br>
+                          <div class="col">
+                            <div class="form-row">
+                              <div class="form-group">
+                                <label for="lbltaskStatus">taskStatus </label>
+                                <input type="text" class="form-control" id="lbltaskStatus" name="taskStatus"
+                                  [(ngModel)]="taskUpdated.taskStatus" placeholder="Enter taskStatus" />
+                              </div>
+                              
+                              <br>
+                              <div class="col">
+                                <div class="form-row">
+                                  <div class="form-group">
+                                    <label for="lbltaskRemainder">taskRemainder </label>
+                                    <input type="time" class="form-control" id="lbltaskRemainder" name="taskRemainder"
+                                      [(ngModel)]="taskUpdated.taskRemainder" placeholder="Enter taskRemainder" />
+                                  </div>
+                                  
+                                  <br>
+                                  <div class="col">
+                                    <div class="form-row">
+                                      <div class="form-group">
+                                        <label for="lbltaskDescription">taskDescription </label>
+                                        <input type="text" class="form-control" id="lbltaskDescription"
+                                          name="taskDescription" [(ngModel)]="taskUpdated.taskDescription"
+                                          placeholder="Enter taskDescription" />
+                                      </div>
+                                      
+                                      <br>
+                                      <div class="form-group">
+                                        <input type="submit" class="btn btn-primary" (click)="updateTask()" value="Update Task">
+                                          
+                                      
+                                      </div>
+                                    </div>
+
+                                  </div>
+                                </div>

@@ -1,0 +1,72 @@
+<div id="appContainer">
+  <div class="row align-items-center h-100">
+    <div class="col-md-5 col-sm-10 mx-auto">
+      <figure class="text-center">
+        <blockquote class="blockquote">
+          <h3>Login here</h3>
+        </blockquote>
+        <figcaption class="blockquote-footer">
+          already have a account <cite title="Source Title"><b>login here</b></cite>
+        </figcaption>
+      </figure>
+
+      <div id="cardStyle" class="card justify-content-center">
+        <div>
+          <button class="btn" [class.btn-light]="flag" type="button" style="width: 100%;" (click)="apply('login')" >Login</button>
+ 
+        </div>
+
+        <div class="card-body">
+          <div *ngIf="flag">
+              <div class="container-fluid">
+                  <div class="row">
+                      <div class="col-12">
+                       <!-- <form [formGroup]="loginForm" (ngSubmit)="login()">-->
+                           <form (ngSubmit)="onSubmit()" [formGroup]="loginForm" >
+                              <div class="form-group">
+                                  <label for="email" class='fa fa-envelope' #emailId></label>
+                                  <input type="email" placeholder="Email Address" formControlName="email" [(ngModel)]="user.emailId">
+                                  <span class="text-danger" *ngIf="loginForm.controls.email.errors && loginForm.controls.email.touched"><br>Invalid Email Address</span>
+                              </div>
+               
+                              <div class="form-group">
+                                  <label for="password" class="fa fa-lock"></label>
+                                  <input type="password" placeholder="Password" formControlName="password" [(ngModel)]="user.password">
+                                  <span class="text-danger" *ngIf="loginForm.controls.password.errors && loginForm.controls.password.touched"><br>Invalid Password</span>
+                              </div>
+               
+                              <div class="text-center">
+                               
+                                  <input id="submitButton" type="submit" class="btn btn-primary" value="Login">
+                              </div>
+               
+                              <div class="text-center">
+                                  <button id="submitButton" type="submit" class="btn btn-primary" (click)="navigateToRegister()">Register</button>
+                              </div>
+                              <!--{{user.emailId}}--{{user.password}}-->
+                             <!-- <div class="text-center text-success" *ngIf="successMessage">{{successMessage}}</div>-->
+               
+                          </form>
+                      </div>
+                  </div>
+               </div>
+
+          </div>
+          
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+    </div>
+  
+
+    <!--<form (ngSubmit)="onSubmit()">
+      <input type="text" name="emailId" [(ngModel)]="user.emailId">
+      <input type="text" name="password" [(ngModel)]="user.password">
+      <input type="submit" value="Login">
+
+      {{user.emailId}}--{{user.password}}
+    </form>-->

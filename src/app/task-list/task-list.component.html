@@ -1,0 +1,51 @@
+<!--<p> Taks  list working....</p>-->
+<table class="table table-hover table-warning">
+  <thead>
+    <tr>
+      <th scope="col">Task Id</th>
+      <th scope="col">Name</th>
+      <th scope="col">Date</th>
+      <th scope="col">Time</th>
+      <th scope="col">Priority</th>
+      <th scope="col">Category</th>
+      <th scope="col">Status</th>
+      <th scope="col">Remainder</th>
+      <th scope="col">Descirption</th>
+      
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let task of tasks" >
+      <td>{{ task.taskId}}</td>
+      <td>{{ task.taskName}}</td>
+      <td>{{ task.taskDate}}</td>
+      <td>{{ task.taskTime}}</td>
+      <td>{{ task.taskPriority}}</td>
+      <td>{{ task.taskCategory}}</td>
+      <td>{{ task.taskStatus}}</td>
+      <td>{{ task.taskRemainder}}</td>
+      <td>{{ task.taskDescription}}</td>
+      
+      <!--<td>
+        <button
+          type="submit"
+          routerLink="/taskedit/{{ task.taskId }}"
+          class="edit"
+        >-->
+      <td>
+          <button class="btn btn-primary"
+            type="submit"
+            (click)="editTask(task)"
+            class="edit"
+          >
+          EDIT
+        </button> 
+
+        <button type="submit" (click)="deleteTask(task.taskId)" class="delete">
+          DELETE
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
